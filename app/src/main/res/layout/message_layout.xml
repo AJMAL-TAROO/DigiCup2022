@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="start"
+    android:background="#ffff"
+    android:padding="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/ic_launcher_foreground"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/circleimageview_background"
+                    android:layout_gravity="center_horizontal"/>
+
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="22sp"
+                android:textColor="#304FFE"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.75"
+                android:orientation='horizontal'
+                android:background="#000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_person_yellow_24dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="by:"
+                    android:paddingStart="10dp"
+                    android:textSize="18sp"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/personName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Person's name"
+                    android:paddingStart="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#7385EA"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/descriptiontxt"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:text="I am a sample description. Data is taken from the
+server and it is being shown here. Each donation has their own description."
+                android:paddingStart="10dp"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:textColor="#202020"/>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/progress_bar_background"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:max="10000"
+                        android:progress="4000"
+                        android:scaleY="5"
+                        android:gravity="center"
+                        android:progressDrawable="@drawable/curved_progress_bar"
+                        android:layout_marginTop="15dp"
+                        android:layout_margin="1dp"
+                        android:indeterminate="false"
+                        android:indeterminateTint="#ff0000"/>
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/amountDonatedtxt"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#006400"
+                    android:text="4000 donated"
+                    />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:text=" / "/>
+                <TextView
+                    android:id="@+id/amountToGotxt"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#ff0000"
+                    android:text="10000 to go"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ending on :"
+                    android:textStyle="bold"
+                    android:paddingStart="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#202020"/>
+
+                <TextView
+                    android:id="@+id/endingtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="01/01/22"
+                    android:paddingStart="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#000"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category  :"
+                    android:textStyle="bold"
+                    android:paddingStart="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#202020"/>
+
+                <TextView
+                    android:id="@+id/categorytxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="category"
+                    android:paddingStart="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#000"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

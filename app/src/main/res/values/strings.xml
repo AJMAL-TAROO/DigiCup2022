@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ZET</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Events</string>
+    <string name="title_notifications">Donations</string>
+    <string name="title_new">Store</string>
+
+</resources>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".pushDonation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="225dp"
+                android:layout_height="225dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"/>
+
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text Title"
+                android:textSize="22sp"
+                android:textColor="#000"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="2dp"
+                android:layout_weight="0.75"
+                android:orientation='horizontal'
+                android:background="#000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/imgVideo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_video"/>
+
+                    <TextView
+                        android:id="@+id/watchVideotxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Watch video"
+                        android:paddingStart="10dp"
+                        android:textSize="16sp"
+                        android:textColor="#000"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <ImageView
+                        android:id="@+id/imgLocation"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_location"/>
+
+                    <TextView
+                        android:id="@+id/seeLocationtxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See location"
+                        android:paddingStart="10dp"
+                        android:textSize="16sp"
+                        android:textColor="#000"/>
+
+                </LinearLayout>
+
+
+                <WebView
+                    android:id="@+id/webViewLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:layout_gravity="top|center"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="by:"
+                        android:paddingStart="10dp"
+                        android:textSize="18sp"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/personName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Person's name"
+                        android:paddingStart="10dp"
+                        android:textSize="18sp"
+                        android:textColor="#7385EA"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/descriptiontxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I am a sample description. Data is taken from the
+server and it is being shown here. Each donation has their own description."
+                    android:paddingStart="10dp"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#202020"/>
+
+                <Button
+                    android:id="@+id/donateBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="donate"
+                    android:layout_marginTop="15dp"
+                    android:background="#ffcc00"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/progress_bar_background">
+
+                        <ProgressBar
+                            android:id="@+id/progressBar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:max="10000"
+                            android:progress="4000"
+                            android:scaleY="5"
+                            android:gravity="center"
+                            android:progressDrawable="@drawable/curved_progress_bar"
+                            android:layout_marginTop="15dp"
+                            android:layout_margin="1dp"
+                            android:indeterminate="false"
+                            android:indeterminateTint="#ff0000"/>
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/amountDonatedtxt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#006400"
+                        android:text="4000 donated"
+                        />
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#000"
+                        android:text=" / "/>
+                    <TextView
+                        android:id="@+id/amountToGotxt"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#ff0000"
+                        android:text="10000 to go"/>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ending on :"
+                        android:textStyle="bold"
+                        android:paddingStart="10dp"
+                        android:textSize="16sp"
+                        android:textColor="#202020"/>
+
+                    <TextView
+                        android:id="@+id/endingtxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01/01/22"
+                        android:paddingStart="10dp"
+                        android:textSize="16sp"
+                        android:textColor="#000"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category  :"
+                        android:textStyle="bold"
+                        android:paddingStart="10dp"
+                        android:textSize="16sp"
+                        android:textColor="#202020"/>
+
+                    <TextView
+                        android:id="@+id/categorytxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="category"
+                        android:textSize="16sp"
+                        android:textColor="#000"
+                        android:paddingStart="10dp"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
